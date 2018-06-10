@@ -31,15 +31,16 @@ Thought to the following:
 
   The size of the URL list could grow infinitely :
 
-     * hashing whould help. currently i am using. 
+     * hashing whould help. currently i am using MD5. 
      * hash collision possible after 100 billion entry.
      * if we need security and more entry the we can go for SHA-256 or SHA-512
-     * also both hash value of url and url string are unique so it make sure single entry at any given poit.
+     * also both hash value of url and url string are unique so it make sure single entry at any given point.
 
   The number of requests may exceed the capacity of this system :
 
      * load balancer has been used
      * HAPROXY and NGINX are both capable of load balansing in servers.
+     * uWSGI also helps in process label load balancing.
      * if we want datacenter basis load balance the we can use f5 or netscalar.
      * we can use newrelic to monitor the server.
 
