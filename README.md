@@ -50,3 +50,16 @@ Thought to the following:
      * make sure when queue producer enter the data into db both hash value and url both are unique. which currently i made in this project.
      * load balancer also help to distribute the load.
 
+  Testing:
+
+     * unittest (added one)
+     * integration test
+     * load test
+     * regression test on each push to branch.
+
+  DevOps:
+
+     * CI/CD build pipeline using jenkin.
+     * docker and kubernetes also help.
+     * deploy the product in cloud like (aws , gcs)
+
