@@ -29,19 +29,21 @@ Get check:
 
 Thought to the following:
 
-  The size of the URL list could grow infinitely:
+  The size of the URL list could grow infinitely :
+
      * hashing whould help. currently i am using. 
      * hash collision possible after 100 billion entry.
      * if we need security and more entry the we can go for SHA-256 or SHA-512
      * also both hash value of url and url string are unique so it make sure single entry at any given poit.
 
-  The number of requests may exceed the capacity of this system:
+  The number of requests may exceed the capacity of this system :
+
      * load balancer has been used
      * HAPROXY and NGINX are both capable of load balansing in servers.
      * if we want datacenter basis load balance the we can use f5 or netscalar.
      * we can use newrelic to monitor the server.
 
-  What are some strategies you might use to update the service with new URLs?
+  What are some strategies you might use to update the service with new URLs :
 
      * messaging queues.
      * make sure when queue producer enter the data into db both hash value and url both are unique. which currently i made in this project.
