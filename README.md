@@ -35,6 +35,7 @@ Thought to the following:
      * hash collision possible after 100 billion entry.
      * if we need security and more entry the we can go for SHA-256 or SHA-512
      * also both hash value of url and url string are unique so it make sure single entry at any given point.
+     * circuit braker pattern also helps in microservice architecture.
 
   The number of requests may exceed the capacity of this system :
 
@@ -43,12 +44,14 @@ Thought to the following:
      * uWSGI also helps in process label load balancing.
      * if we want datacenter basis load balance the we can use f5 or netscalar.
      * we can use newrelic to monitor the server.
+     * circuit braker pattern also helps in microservice architecture.
 
   What are some strategies you might use to update the service with new URLs :
 
      * messaging queues.
      * make sure when queue producer enter the data into db both hash value and url both are unique. which currently i made in this project.
      * load balancer also help to distribute the load.
+     * circuit braker pattern also helps in microservice architecture.
 
   Testing:
 
