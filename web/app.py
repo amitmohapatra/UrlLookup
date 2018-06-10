@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify, make_response
 app = Flask(__name__)
 DATABASE = '/db/test.db'
 
-
+# get the db connection
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -24,6 +24,7 @@ def close_connection(exception):
         db.close()
 
 
+# query the db
 def query_db(query, args=(), one=False):
     cur = get_db().execute(query, args)
     rv = cur.fetchall()
@@ -31,6 +32,7 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 
+#get request to check the url
 @app.route('/urlinfo/1/<string:host_port>/')
 @app.route('/urlinfo/1/<string:host_port>/<path:url_path>')
 def lookup(host_port, url_path=None):
